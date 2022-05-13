@@ -13,6 +13,8 @@ public class WindFieldModule : GameModule {
         if (m_GridBlocks.ContainsKey(id)) {
             m_GridBlocks[id].ApplyWindVector(vector);
         }
+
+        Game.Event.Invoke("OnWindAdded", x, y);
     }
 
     public Vector3 GetWindVector(int x, int y) {
@@ -62,6 +64,8 @@ public class WindFieldModule : GameModule {
         if (!update) {
             return;
         }
+        
+        
 
         foreach (var value in m_GridBlocks.Values) {
             value.UpdateAttenuation();

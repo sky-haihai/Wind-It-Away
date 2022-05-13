@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,33 +10,26 @@ public class RoboMovement : MonoBehaviour {
 
     public Vector3 destination;
     public Quaternion lookDirection;
-    public float inputDelay = 0.5f;
+    public float moveDelay = 0.5f;
 
-    private float m_InputTimer = 0f;
+    private TBInputModule m_TbInputModule;
 
-    private const string WaitingInput = "IsReceivingAnyInput";
+    private void Start() {
+        m_TbInputModule = GameManager.GetModule<TBInputModule>();
+    }
 
     private void Update() {
         Move();
-        UpdateInputTimer();
-    }
-
-    void UpdateInputTimer() {
-        m_InputTimer += Time.deltaTime;
     }
 
     void Move() {
-        transform.position = Vector3.Lerp(transform.position, destination, 0.3f);
-        transform.rotation = Quaternion.Lerp(transform.rotation, lookDirection, 0.3f);
-        if (Vector3.Distance(transform.position, destination) < 0.1f) {
-            if (m_InputTimer >= inputDelay) {
-                Game.Blackboard.SetData(WaitingInput, true);
-            }
+        if (Vector3.Distance(transform.position, destination) > 0.01f) {
+            transform.position = Vector3.Lerp(transform.position, destination, 0.3f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookDirection, 0.3f);
         }
 
         var input = Game.Input.GetWASDInput();
-        var waiting = Game.Blackboard.GetData<bool>(WaitingInput);
-        if (!waiting) {
+        if (!m_TbInputModule.IsReceivingInput) {
             return;
         }
 
@@ -104,8 +98,7 @@ public class RoboMovement : MonoBehaviour {
 
             Game.Blackboard.SetData("Robo.LookDirection", direction);
 
-            Game.Blackboard.SetData(WaitingInput, false);
-            m_InputTimer = 0f;
+            m_TbInputModule.AddDelay(moveDelay);
         }
     }
 }

@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5620064cd6c3c42bf45381ecbb8bfa, type: 3}
   m_Name: NewSobelOutlineFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   enable: 1
   renderPassEvent: 1000
   blitMat: {fileID: 2100000, guid: 4c0ebb9b944d5ea4d9ad0d93b0021ff8, type: 2}

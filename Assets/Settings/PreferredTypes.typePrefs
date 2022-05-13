@@ -58,5 +58,6 @@
     "XiheFramework.SceneSvc",
     "XiheFramework.SerializationSvc",
     "UISvc",
-    "BeatSvc"
+    "BeatSvc",
+    "UnityEngine.ParticleSystem"
 ]

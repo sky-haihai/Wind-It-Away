@@ -43,7 +43,7 @@ Rigidbody:
   m_GameObject: {fileID: 28378902152099431}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 12
+  m_Drag: 20
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
+  gridSize: 1
+  fixWindAmount: 10
 --- !u!1 &7243309718677743176
 GameObject:
   m_ObjectHideFlags: 0
