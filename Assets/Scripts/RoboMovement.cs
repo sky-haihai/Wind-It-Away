@@ -1,33 +1,107 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using XiheFramework;
 
-public class RoboMovement : MonoBehaviour {
-    public int x;
-    public int y;
-
-    public Vector3 destination;
-    public Quaternion lookDirection;
+public class RoboMovement : GridMovement {
     public float moveDelay = 0.5f;
+    public float rotateDelay = 0.25f;
 
     private TBInputModule m_TbInputModule;
 
     private void Start() {
         m_TbInputModule = GameManager.GetModule<TBInputModule>();
+
+        GameManager.GetModule<WindFieldModule>().RegisterWalkable(0, 0, 0, 0, 10f);
     }
 
     private void Update() {
+        InitCoordinate();
+
+        if (Vector3.Distance(transform.position, destination) > 0.01f || Quaternion.Angle(transform.rotation, lookDirection) > 1f) {
+            transform.position = Vector3.Lerp(transform.position, destination, 0.3f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookDirection, 0.5f);
+        }
+
         Move();
+        Rotate();
+    }
+
+    private void Rotate() {
+        if (!m_TbInputModule.IsReceivingInput) {
+            return;
+        }
+
+        LookDirection direction = Game.Blackboard.GetData<LookDirection>("Robo.LookDirection");
+
+        bool changed = false;
+        if (Game.Input.GetKey("RotateClockwise")) {
+            changed = true;
+            switch (direction) {
+                case LookDirection.Forward:
+                    direction = LookDirection.Right;
+                    break;
+                case LookDirection.Backward:
+                    direction = LookDirection.Left;
+                    break;
+                case LookDirection.Left:
+                    direction = LookDirection.Forward;
+                    break;
+                case LookDirection.Right:
+                    direction = LookDirection.Backward;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        if (Game.Input.GetKey("RotateCounterClockwise")) {
+            changed = true;
+            switch (direction) {
+                case LookDirection.Forward:
+                    direction = LookDirection.Left;
+                    break;
+                case LookDirection.Backward:
+                    direction = LookDirection.Right;
+                    break;
+                case LookDirection.Left:
+                    direction = LookDirection.Backward;
+                    break;
+                case LookDirection.Right:
+                    direction = LookDirection.Forward;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        if (!changed) {
+            return;
+        }
+
+        switch (direction) {
+            case LookDirection.Forward:
+                lookDirection = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+                break;
+            case LookDirection.Backward:
+                lookDirection = Quaternion.LookRotation(Vector3.back, Vector3.up);
+                break;
+            case LookDirection.Left:
+                lookDirection = Quaternion.LookRotation(Vector3.left, Vector3.up);
+                break;
+            case LookDirection.Right:
+                lookDirection = Quaternion.LookRotation(Vector3.right, Vector3.up);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        m_TbInputModule.AddDelay(rotateDelay);
+        Game.Blackboard.SetData("Robo.LookDirection", direction);
+
+        Game.Blackboard.SetData("Robo.LookDirection", direction);
     }
 
     void Move() {
-        if (Vector3.Distance(transform.position, destination) > 0.01f) {
-            transform.position = Vector3.Lerp(transform.position, destination, 0.3f);
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookDirection, 0.3f);
-        }
-
         var input = Game.Input.GetWASDInput();
         if (!m_TbInputModule.IsReceivingInput) {
             return;
@@ -76,7 +150,7 @@ public class RoboMovement : MonoBehaviour {
             deltaX = 0;
         }
 
-        if (GameManager.GetModule<WindFieldModule>().HasBlock(x + deltaX, y + deltaY)) {
+        if (GameManager.GetModule<WindFieldModule>().RegisterWalkable(x, y, x + deltaX, y + deltaY, 0.5f)) {
             x += deltaX;
             y += deltaY;
             destination = new Vector3(x * gridSize, 0f, y * gridSize);

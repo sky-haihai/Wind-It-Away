@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8951498087297737785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8951498087297737783}
+  - component: {fileID: 8951498087297737781}
+  - component: {fileID: 8951498087297737780}
+  m_Layer: 0
+  m_Name: OpeningLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8951498087297737783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951498087297737785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8951498087297737781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951498087297737785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5c3ebb24c97464da319951cafe5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedExposedParameters: []
+  _boundGraphSerialization: '{"type":"FlowCanvas.FlowScript","nodes":[{"_position":{"x":58.29391,"y":168.8614},"$type":"FlowCanvas.Nodes.StartEvent","$id":"0"},{"_method":{"_baseInfo":"XiheFramework.InputSvc|DisableInput|System.Void","_paramsInfo":""},"_callable":true,"_position":{"x":222.0,"y":177.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"1"},{"_field":{"_baseInfo":"CatoMovement|state"},"accessMode":1,"_position":{"x":481.6718,"y":185.3259},"$type":"FlowCanvas.Nodes.ReflectedFieldNodeWrapper","$version":1,"$id":"2"},{"_field":{"_baseInfo":"VacuuMovement|state"},"accessMode":1,"_position":{"x":761.0,"y":185.0},"$type":"FlowCanvas.Nodes.ReflectedFieldNodeWrapper","$version":1,"$id":"3"},{"_method":{"_baseInfo":"UnityEngine.Playables.PlayableDirector|Play|System.Void","_paramsInfo":""},"_callable":true,"_position":{"x":1123.312,"y":255.771},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"4"},{"eventName":{"_value":"OnOpeningEnd"},"target":{},"targets":{},"_position":{"x":66.66139,"y":497.6386},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"5"},{"_method":{"_baseInfo":"XiheFramework.InputSvc|EnableInput|System.Void","_paramsInfo":""},"_callable":true,"_position":{"x":453.0,"y":545.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"6"},{"_field":{"_baseInfo":"CatoMovement|state"},"accessMode":1,"_inputPortValues":{"Value":{"$content":1,"$type":"System.Int32"}},"_position":{"x":708.6809,"y":555.8997},"$type":"FlowCanvas.Nodes.ReflectedFieldNodeWrapper","$version":1,"$id":"7"},{"_field":{"_baseInfo":"VacuuMovement|state"},"accessMode":1,"_inputPortValues":{"Value":{"$content":1,"$type":"System.Int32"}},"_position":{"x":965.2712,"y":526.946},"$type":"FlowCanvas.Nodes.ReflectedFieldNodeWrapper","$version":1,"$id":"8"},{"_simplexNode":{},"_inputPortValues":{"time":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":1003.71,"y":69.45703},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.Wait,
+    ParadoxNotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"9"},{"_method":{"_baseInfo":"XiheFramework.EventSvc|Invoke|System.Void","_paramsInfo":"System.String|System.Object|System.Object"},"_callable":true,"_inputPortValues":{"eventName":{"$content":"OnOpeningEnd","$type":"System.String"}},"_position":{"x":1237.845,"y":109.9872},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"10"},{"value":{"_value":1},"_position":{"x":306.0034,"y":288.0002},"$type":"FlowCanvas.Nodes.GetVariable`1[[CatoMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"11"},{"value":{"_value":2},"_position":{"x":624.398,"y":296.9434},"$type":"FlowCanvas.Nodes.GetVariable`1[[VacuuMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"12"},{"value":{"_value":3},"_position":{"x":910.7349,"y":335.5021},"$type":"FlowCanvas.Nodes.GetVariable`1[[UnityEngine.Playables.PlayableDirector,
+    UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"13"},{"value":{"_value":1},"_position":{"x":507.0127,"y":666.3571},"$type":"FlowCanvas.Nodes.GetVariable`1[[CatoMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"14"},{"value":{"_value":2},"_position":{"x":817.2828,"y":694.0054},"$type":"FlowCanvas.Nodes.GetVariable`1[[VacuuMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"15"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"
+    ","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2","$version":1},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"2","$version":1},"_targetNode":{"$ref":"3","$version":1},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"3","$version":1},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Received","_targetPortName":"
+    ","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7","$version":1},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"7","$version":1},"_targetNode":{"$ref":"8","$version":1},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Done","_targetPortName":"
+    ","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"10"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"CatoMovement","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"2","$version":1},"$type":"FlowCanvas.BinderConnection`1[[CatoMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"VacuuMovement","_sourceNode":{"$ref":"12"},"_targetNode":{"$ref":"3","$version":1},"$type":"FlowCanvas.BinderConnection`1[[VacuuMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"PlayableDirector","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Playables.PlayableDirector,
+    UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"CatoMovement","_sourceNode":{"$ref":"14"},"_targetNode":{"$ref":"7","$version":1},"$type":"FlowCanvas.BinderConnection`1[[CatoMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"VacuuMovement","_sourceNode":{"$ref":"15"},"_targetNode":{"$ref":"8","$version":1},"$type":"FlowCanvas.BinderConnection`1[[VacuuMovement,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _boundGraphSource:
+    _version: 3.25
+    _category: 
+    _comments: 
+    _translation: {x: -484, y: 47}
+    _zoomFactor: 1
+  _firstActivation: 0
+  _enableAction: 0
+  _disableAction: 0
+  _lockBoundGraphPrefabOverrides: 1
+  _preInitializeSubGraphs: 0
+  _updateMode: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 8951498087297737780}
+--- !u!114 &8951498087297737780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951498087297737785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{}}'
+  _objectReferences: []
+  _serializedVariables: []

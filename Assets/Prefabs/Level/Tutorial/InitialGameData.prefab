@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3092058735273921974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3092058735273921971}
+  - component: {fileID: 3092058735273921969}
+  - component: {fileID: 3092058735273921968}
+  m_Layer: 0
+  m_Name: InitialGameData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3092058735273921971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092058735273921974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3092058735273921969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092058735273921974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02612a59102304b47b02501bb234fa5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 3092058735273921968}
+--- !u!114 &3092058735273921968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092058735273921974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{"WaitingInput":{"_name":"WaitingInput","_id":"61b3b0b5-60be-47f9-9b6c-01a549b6de69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GridMax":{"_value":{"x":2.0,"y":2.0},"_name":"GridMax","_id":"e8978597-cdfa-429f-94b6-8d54c6dc221e","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector2,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"GridSize":{"_value":1.0,"_name":"GridSize","_id":"10dc458f-8673-4769-9a0d-82926a2e42ea","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"UltCharge":{"_name":"UltCharge","_id":"244b7d39-a47b-4102-b413-9fd18f2f7b65","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SuckAroundEffect":{"_value":1,"_name":"SuckAroundEffect","_id":"aa7520ae-0e48-4e42-83ce-5b31ebd380d1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+    UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"BlasterEffect":{"_value":2,"_name":"BlasterEffect","_id":"eff1eb63-3cb4-4667-9867-71a04de1c907","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+    UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FanEffect":{"_value":3,"_name":"FanEffect","_id":"903c288a-4f9a-47ff-b66b-90e35dc65652","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+    UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"ConcentrateEffect":{"_value":4,"_name":"ConcentrateEffect","_id":"5e7d82b6-49d6-4afc-9758-6a5285cc6233","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+    UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DialogueBubbleTemplate_Left":{"_value":5,"_name":"DialogueBubbleTemplate_Left","_id":"b25edf33-6d76-4aa0-9c93-4c5aa9481148","$type":"NodeCanvas.Framework.Variable`1[[DialogueBubble,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DialogueBubbleTemplate_Right":{"_value":6,"_name":"DialogueBubbleTemplate_Right","_id":"3433a131-eabd-4338-a03c-94bf3cdef483","$type":"NodeCanvas.Framework.Variable`1[[DialogueBubble,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"ClearPoint":{"_value":1700,"_name":"ClearPoint","_id":"e98b3cb2-e6dc-41b0-800d-c2fe04cd04bd","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 286823738271914519, guid: 31dc86017daa408488db87120c55754c, type: 3}
+  - {fileID: 286823738271914519, guid: c24d5bbac9ba60045a0d0603ef826fa3, type: 3}
+  - {fileID: 286823738271914519, guid: 0bf43a466a736b247b0b29731c556301, type: 3}
+  - {fileID: 286823738271914519, guid: 289ec933b2b99854ca4d1f8e5b19a11f, type: 3}
+  - {fileID: 1198773137053489877, guid: 61f3aeaee44aea34498d8417df0400c6, type: 3}
+  - {fileID: 1198773137053489877, guid: 9ad4e0fbf748da249849bfda3fbbde72, type: 3}
+  _serializedVariables:
+  - _json: '{"_name":"WaitingInput","_id":"61b3b0b5-60be-47f9-9b6c-01a549b6de69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":{"x":2.0,"y":2.0},"_name":"GridMax","_id":"e8978597-cdfa-429f-94b6-8d54c6dc221e","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector2,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_value":1.0,"_name":"GridSize","_id":"10dc458f-8673-4769-9a0d-82926a2e42ea","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"UltCharge","_id":"244b7d39-a47b-4102-b413-9fd18f2f7b65","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":1,"_name":"SuckAroundEffect","_id":"aa7520ae-0e48-4e42-83ce-5b31ebd380d1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 286823738271914519, guid: 31dc86017daa408488db87120c55754c, type: 3}
+  - _json: '{"_value":1,"_name":"BlasterEffect","_id":"eff1eb63-3cb4-4667-9867-71a04de1c907","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 286823738271914519, guid: c24d5bbac9ba60045a0d0603ef826fa3, type: 3}
+  - _json: '{"_value":1,"_name":"FanEffect","_id":"903c288a-4f9a-47ff-b66b-90e35dc65652","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 286823738271914519, guid: 0bf43a466a736b247b0b29731c556301, type: 3}
+  - _json: '{"_value":1,"_name":"ConcentrateEffect","_id":"5e7d82b6-49d6-4afc-9758-6a5285cc6233","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.ParticleSystem,
+      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 286823738271914519, guid: 289ec933b2b99854ca4d1f8e5b19a11f, type: 3}
+  - _json: '{"_value":1,"_name":"DialogueBubbleTemplate_Left","_id":"b25edf33-6d76-4aa0-9c93-4c5aa9481148","$type":"NodeCanvas.Framework.Variable`1[[DialogueBubble,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1198773137053489877, guid: 61f3aeaee44aea34498d8417df0400c6, type: 3}
+  - _json: '{"_value":1,"_name":"DialogueBubbleTemplate_Right","_id":"3433a131-eabd-4338-a03c-94bf3cdef483","$type":"NodeCanvas.Framework.Variable`1[[DialogueBubble,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1198773137053489877, guid: 9ad4e0fbf748da249849bfda3fbbde72, type: 3}
+  - _json: '{"_value":1700,"_name":"ClearPoint","_id":"e98b3cb2-e6dc-41b0-800d-c2fe04cd04bd","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []

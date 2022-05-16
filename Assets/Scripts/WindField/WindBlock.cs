@@ -28,7 +28,8 @@ public class WindBlock : MonoBehaviour {
     }
 
     public Vector3 GetRandomWindVector() {
-        var ran = UnityEngine.Random.Range(0.5f, 1f);
+        var ran = UnityEngine.Random.Range(0f, 1f);
+        ran = Mathf.Pow(ran, 2f);
         return windVector * ran;
     }
 
@@ -42,6 +43,18 @@ public class WindBlock : MonoBehaviour {
     }
 
     private void OnDrawGizmos() {
+        if (!Application.isPlaying) {
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube(transform.position + Vector3.up * 0.05f, new Vector3(size, .1f, size));
+            return;
+        }
+
+        if (!GameManager.GetModule<WindFieldModule>().IsWalkable(x, y)) {
+            Gizmos.color = Color.black;
+            Gizmos.DrawCube(transform.position + Vector3.up * 0.05f, new Vector3(size, .1f, size));
+            return;
+        }
+
         const float scale = 5f;
         var strength = windVector.magnitude / scale;
         strength = Mathf.Clamp01(strength);
