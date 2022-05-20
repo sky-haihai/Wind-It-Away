@@ -42,7 +42,7 @@ public class WindAgentVacuu : MonoBehaviour {
         m_WindModule.AddWind(currentBlock.x, currentBlock.y + 1, (Vector3.back).normalized * windAmount, false);
         m_WindModule.AddWind(currentBlock.x + 1, currentBlock.y + 1, (Vector3.back + Vector3.left).normalized * windAmount, false);
         m_WindModule.AddWind(currentBlock.x - 1, currentBlock.y, (Vector3.right).normalized * windAmount, false);
-        m_WindModule.AddWind(currentBlock.x , currentBlock.y, (Vector3.forward).normalized * windAmount, false);
+        // m_WindModule.AddWind(currentBlock.x , currentBlock.y, (Vector3.forward).normalized * windAmount, false);
         m_WindModule.AddWind(currentBlock.x + 1, currentBlock.y, (Vector3.left).normalized * windAmount, false);
         m_WindModule.AddWind(currentBlock.x - 1, currentBlock.y - 1, (Vector3.forward + Vector3.right).normalized * windAmount, false);
         m_WindModule.AddWind(currentBlock.x, currentBlock.y - 1, (Vector3.forward).normalized * windAmount, false);
